@@ -1,9 +1,10 @@
 .main {
   height: 100%;
   width: 100%;
-  background-color: #ef6a6a;
+  background-color: var(--main-bg-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--main-text-color);
 }
