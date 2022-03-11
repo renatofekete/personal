@@ -10,13 +10,13 @@ const Header = () => {
   return (
     <header>
       <nav className={styles.navbar}>
-        <label className={styles.switch}>
-          <input className={styles.input} onChange={e => changeTheme(e)} type="checkbox"/>
-          <span className={styles.slider}></span>  
+        <label tabIndex={0} className={styles.switch} htmlFor="switch">
+          <input tabIndex={1} className={styles.input} name="switch" id="switch" onChange={e => changeTheme(e)} type="checkbox"/>
+          <span tabIndex={2} className={styles.slider}></span>  
         </label>
       </nav>
     </header>
   )
-} 
+}     
 
 export default Header
