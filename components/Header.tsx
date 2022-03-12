@@ -10,8 +10,8 @@ const Header = () => {
   return (
     <header>
       <nav className={styles.navbar}>
-        <label className={styles.switch} htmlFor="switch">
-          <input defaultChecked={false} className={styles.input} name="switch" id="switch" onChange={e => changeTheme(e)} type="checkbox"/>
+        <label role={"switch"} aria-checked className={styles.switch} htmlFor="switch">
+          <input className={styles.input} name="switch" id="switch" onChange={e => changeTheme(e)} type="checkbox"/>
           <span className={styles.slider}></span>  
         </label>
       </nav>
