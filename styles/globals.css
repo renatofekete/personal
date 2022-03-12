@@ -3,12 +3,14 @@
   --secondary-bg-color: #41affe;
   --main-text-color: #21587d;
   --secondary-text-color: #ffffff;
+  --detail-color: #348ccc;
 }
 [data-theme='dark'] {
   --main-bg-color: #21587d;
   --secondary-bg-color: #21587d;
   --main-text-color: #ffffff;
   --secondary-text-color: #ffffff;
+  --detail-color: #90ceff;
 }
 html,
 body,
@@ -41,7 +43,6 @@ main {
   box-sizing: border-box;
   margin: 0;
 }
-
 header,
 footer,
 main {
