@@ -24,7 +24,7 @@ export const getStaticProps =  async () => {
 }
 
 const Home: NextPage = ({projects} : any) => {
-  console.log(process.env.SPACE_ID) 
+  console.log(process.env.TEST_ID) 
   console.log(projects)
   
 
