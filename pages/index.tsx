@@ -24,7 +24,7 @@ import { createClient } from 'contentful'
 }*/
 
 const Home: NextPage = () => {
-  console.log(process.env.TEST_ID) 
+  console.log(process.env.NEXT_PUBLIC_TEST_ID) 
   
   
 
