@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import styles from '../styles/Home.module.css'
 import { createClient } from 'contentful'
 
-export const getStaticProps =  async () => {
+/*export const getStaticProps =  async () => {
 
   const client = createClient({
     space: process.env.NEXT_PUBLIC_SPACE_ID as string,
@@ -21,10 +21,11 @@ export const getStaticProps =  async () => {
       projects: res.items
     }
   }
-}
+}*/
 
-const Home: NextPage = ({projects} : any) => {
-  console.log(projects)
+const Home: NextPage = () => {
+  console.log(process.env.TEST_ID) 
+  
   
 
   return (
