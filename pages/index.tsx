@@ -24,8 +24,9 @@ export const getStaticProps =  async () => {
 }
 
 const Home: NextPage = ({projects} : any) => { 
+  console.log(projects)
   
-  
+
   return (
     <>
       <Head>

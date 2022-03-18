@@ -1,4 +1,6 @@
 import { createClient } from 'contentful'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+//import { BLOCK } from '@contentful/rich-text-types'
 
 export const getStaticPaths = async () => {
   const client = createClient({
@@ -32,11 +34,10 @@ export const getStaticProps = async ({ params }) => {
     accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN,
   })
 
-  //const res = await client.getEntry(context.params.id)
-
   const { items } = await client.getEntries({
     content_type: 'project',
     'fields.slug': params.slug,
+    include: 10,
   })
 
   if (!items.length) {
@@ -47,19 +48,25 @@ export const getStaticProps = async ({ params }) => {
       },
     }
   }
-
+  console.log('AAA')
+  console.log(items[0].sys)
   return {
     props: {
       project: items[0],
+      revalidate: 1,
     },
   }
 }
 
 const SingleProject = ({ project }) => {
-  console.log(project.fields.projectTitle)
+  if (!project) return <h1>No recipe</h1>
+
+  const { projectDescription, projectTitle } = project.fields
+
   return (
     <>
-      <h1>Hello from {project.fields.projectTitle}</h1>
+      <h1>Hello from {projectTitle}</h1>
+      <div>{documentToReactComponents(projectDescription)}</div>
     </>
   )
 }
