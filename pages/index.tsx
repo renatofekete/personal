@@ -24,9 +24,8 @@ export const getStaticProps =  async () => {
 }
 
 const Home: NextPage = ({projects} : any) => { 
-  console.log(projects)
   
-
+  
   return (
     <>
       <Head>
@@ -39,7 +38,6 @@ const Home: NextPage = ({projects} : any) => {
         <h1 className={styles.title}>Hi, I'm Renato!</h1>
         <p>And this is my place where I'll store projects and where I'll play around with technology that I want to learn.</p>
         <p>This website is a constant work in progress, and I'll change it a lot.</p>
-        <p>{process.env.NEXT_PUBLIC_SPACE_ID}</p>
       </main>
 
       <footer>
