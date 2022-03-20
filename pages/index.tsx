@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import styles from '../styles/Home.module.css'
 import { createClient } from 'contentful'
+import Footer from '../components/Footer'
+import Page from '../components/Page'
 
 export const getStaticProps =  async () => {
 
@@ -24,27 +26,21 @@ export const getStaticProps =  async () => {
 }
 
 const Home: NextPage = ({projects} : any) => { 
-  console.log(projects)
   
-
   return (
-    <>
+    <Page>
       <Head>
         <title>Renato Fekete</title>
         <meta name="description" content="Personal website of Renato Fekete"/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      
       <main className={styles.main}>
         <h1 className={styles.title}>Hi, I'm Renato!</h1>
         <p>And this is my place where I'll store projects and where I'll play around with technology that I want to learn.</p>
         <p>This website is a constant work in progress, and I'll change it a lot.</p>
       </main>
-
-      <footer>
-        <span>Renato Fekete &copy; 2022</span>  
-      </footer>
-    </>
+    </Page>  
   )
 }
 

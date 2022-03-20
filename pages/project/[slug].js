@@ -48,8 +48,6 @@ export const getStaticProps = async ({ params }) => {
       },
     }
   }
-  console.log('AAA')
-  console.log(items[0].sys)
   return {
     props: {
       project: items[0],

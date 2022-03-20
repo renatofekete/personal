@@ -8,7 +8,7 @@ const Header = () => {
   }
 
   return (
-    <header>
+    <header className={styles.header}>
       <nav className={styles.navbar}>
         <label role={"switch"} aria-checked className={styles.switch} htmlFor="switch">
           <input className={styles.input} name="switch" id="switch" onChange={e => changeTheme(e)} type="checkbox"/>

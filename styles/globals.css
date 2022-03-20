@@ -44,19 +44,8 @@ main {
   margin: 0;
 }
 header,
-footer,
 main {
   padding: 2em 2em;
-}
-
-header,
-footer {
-  background-color: var(--secondary-bg-color);
-  color: var(--secondary-text-color);
-}
-
-footer {
-  text-align: center;
 }
 
 main p {
