@@ -34,7 +34,6 @@ const projects: NextPage = ({projects} : any) => {
             </p>
           )
         })}
-        <p>jebate</p>
       </Page>
     </>
   )
