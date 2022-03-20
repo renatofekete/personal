@@ -3,4 +3,5 @@
   color: var(--secondary-text-color);
   text-align: center;
   padding: 4em 2em;
+  margin-top: auto;
 }

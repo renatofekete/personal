@@ -43,10 +43,6 @@ main {
   box-sizing: border-box;
   margin: 0;
 }
-header,
-main {
-  padding: 2em 2em;
-}
 
 main p {
   margin-bottom: 0.5em;

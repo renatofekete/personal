@@ -1,6 +1,6 @@
 import { createClient } from 'contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-//import { BLOCK } from '@contentful/rich-text-types'
+import Page from '../../components/Page'
 
 export const getStaticPaths = async () => {
   const client = createClient({
@@ -63,8 +63,10 @@ const SingleProject = ({ project }) => {
 
   return (
     <>
-      <h1>Hello from {projectTitle}</h1>
-      <div>{documentToReactComponents(projectDescription)}</div>
+      <Page>
+        <h1>Hello from {projectTitle}</h1>
+        <div>{documentToReactComponents(projectDescription)}</div>
+      </Page>
     </>
   )
 }

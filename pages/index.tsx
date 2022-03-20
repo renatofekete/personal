@@ -3,29 +3,13 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import styles from '../styles/Home.module.css'
-import { createClient } from 'contentful'
+
 import Footer from '../components/Footer'
 import Page from '../components/Page'
 
-export const getStaticProps =  async () => {
 
-  const client = createClient({
-    space: process.env.NEXT_PUBLIC_SPACE_ID as string,
-    accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN as string,
-  })
 
-  const res = await client.getEntries({
-    content_type: 'project'
-  })
-
-  return {
-    props: {
-      projects: res.items
-    }
-  }
-}
-
-const Home: NextPage = ({projects} : any) => { 
+const Home: NextPage = () => { 
   
   return (
     <Page>
