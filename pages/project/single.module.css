@@ -1,0 +1,12 @@
+.article {
+  width: min(620px, 100%);
+  margin: auto;
+}
+
+.article h1 {
+  margin-bottom: 2rem;
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+}

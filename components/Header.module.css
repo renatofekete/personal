@@ -6,13 +6,34 @@
 
 .navbar {
   display: flex;
+  align-items: center;
 }
+
+.navigation {
+  list-style-type: none;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+}
+
+.navigation li {
+  margin-left: 1.5rem;
+}
+
+.svgSwitch {
+  width: 2em;
+  height: 2em;
+}
+
+/* SWITCH FOR THEME*/
+
 .switch {
   position: relative;
   width: 60px;
   height: 36px;
   display: block;
-  margin-left: auto;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }

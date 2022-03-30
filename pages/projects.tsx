@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 import { createClient } from 'contentful'
 import Page from '../components/Page'
 import Link from 'next/link'
+import styles from './projects.module.css'
 
 export const getStaticProps =  async () => {
 
@@ -26,7 +27,7 @@ const projects: NextPage = ({projects} : any) => {
   return (
     <>
       <Page>
-        <h1>Hello from Projects page</h1>
+        <div className={styles.list}>
         {projects.map((project: any) => {
           return(
             <p key={project.fields.title}>
@@ -34,6 +35,7 @@ const projects: NextPage = ({projects} : any) => {
             </p>
           )
         })}
+        </div>
       </Page>
     </>
   )

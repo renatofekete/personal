@@ -1,6 +1,7 @@
 import { createClient } from 'contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Page from '../../components/Page'
+import styles from './single.module.css'
 
 export const getStaticPaths = async () => {
   const client = createClient({
@@ -57,15 +58,25 @@ export const getStaticProps = async ({ params }) => {
 }
 
 const SingleProject = ({ project }) => {
-  if (!project) return <h1>No recipe</h1>
+  if (!project) {
+    return (
+      <Page>
+        <h1>No recipe</h1>
+      </Page>
+    )
+  }
 
   const { projectDescription, projectTitle } = project.fields
 
   return (
     <>
       <Page>
-        <h1>Hello from {projectTitle}</h1>
-        <div>{documentToReactComponents(projectDescription)}</div>
+        <article className={styles.article}>
+          <h1>{projectTitle}</h1>
+          <div className={styles.content}>
+            {documentToReactComponents(projectDescription)}
+          </div>
+        </article>
       </Page>
     </>
   )

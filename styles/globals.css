@@ -5,6 +5,7 @@
   --secondary-text-color: #ffffff;
   --detail-color: #348ccc;
 }
+
 [data-theme='dark'] {
   --main-bg-color: #21587d;
   --secondary-bg-color: #21587d;
