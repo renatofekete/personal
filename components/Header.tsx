@@ -19,16 +19,22 @@ const Header = () => {
 
   }*/
 
-  const changeTheme2 = () => {
-    theme === 'dark' ? context.setTheme('light') : context.setTheme('dark')
-    theme === 'dark' ? document.documentElement.setAttribute('data-theme', 'light') : document.documentElement.setAttribute('data-theme', 'dark')  
+  const changeTheme = () => {
+    let newTheme = theme === 'dark' ? 'light' : 'dark'
+    context.setTheme(newTheme)
+    document.documentElement.setAttribute('data-theme', newTheme)
+    saveToLocalStorage("theme", newTheme)  
   }
 
+  const saveToLocalStorage = (key: string, value: string) => {
+    localStorage.setItem(key, value)  
+  }
 
   return (
     <header className={styles.header}>
       <nav className={styles.navbar}>
         <ul className={styles.navigation}>
+          <li>{theme}</li>
           <li>
             <Link href={`/`}>Home</Link>
           </li>
@@ -36,7 +42,7 @@ const Header = () => {
             <Link href={`/projects`}>Projects</Link>
           </li>
         </ul>
-        <div className={styles.svgSwitch} onClick={() => changeTheme2()}>
+        <div className={styles.svgSwitch} onClick={changeTheme}>
           {theme === 'light' ? <MoonSvg/> : <SunSvg/>}
         </div>
         {/*
