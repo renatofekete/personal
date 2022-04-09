@@ -9,7 +9,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     if (typeof window !== "undefined") {
       let themeOnLoad = localStorage.getItem('theme') || "light"
       setTheme(themeOnLoad) 
-      document.documentElement.setAttribute('data-theme', themeOnLoad as string)
     }
   }
   useEffect(() => {
