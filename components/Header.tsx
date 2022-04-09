@@ -34,7 +34,6 @@ const Header = () => {
     <header className={styles.header}>
       <nav className={styles.navbar}>
         <ul className={styles.navigation}>
-          <li>{theme}</li>
           <li>
             <Link href={`/`}>Home</Link>
           </li>
